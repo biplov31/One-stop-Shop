@@ -15,7 +15,7 @@ a {
 header {
   background-color: #222222;
   color: #dddddd;
-  padding: 1rem 2rem;
+  padding: 1.5rem 2rem;
   display: flex;
   justify-content: space-between;
 }
@@ -31,6 +31,9 @@ main h2 {
   text-align: center;
   text-transform: uppercase;
   font-weight: 600;
+}
+main {
+  min-height: 80vh;
 }
 .product-list {
   display: flex;
@@ -61,4 +64,30 @@ main h2 {
   max-width: 100%;
   margin: 0 auto;
   aspect-ratio: 1;
+}
+.product-detail {
+  max-width: 60vw;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .8rem;
+}
+.product-detail img {
+  width: 40%;
+}
+.product-detail h3 {
+  font-size: 1.8rem;
+}
+.product-detail strong {
+  font-size: 1.4rem;
+}
+footer {
+  margin-top: 2rem;
+  background-color: #222222;
+  padding: 1.5rem;
+  color: #dddddd;
+  text-align: center;
 }
