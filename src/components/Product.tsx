@@ -1,7 +1,6 @@
-
 type ProductProps = {
   title: string,
-  price: string,
+  price: number,
   image: string,
 }
 
