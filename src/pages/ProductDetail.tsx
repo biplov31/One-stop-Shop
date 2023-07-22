@@ -42,7 +42,7 @@ export const ProductDetail = () => {
             <h3>{product.title}</h3>
             <strong>${product.price}</strong>
             <p>{product.description}</p>
-            <button onClick={() => addToCart && addToCart(product)}>Add to cart</button>
+            <button className="btn" onClick={() => addToCart && addToCart(product)}>Add to cart</button>
           </div>
         </div>
         : <h3 className="loading-msg">Loading...</h3>

@@ -30,9 +30,22 @@ header nav {
   align-items: center;
   gap: 3rem;
 }
-nav .shopping-cart {
+nav .cart-container {
+  position: relative;
+}
+.cart-container .shopping-cart {
   width: 1.5rem;
   filter: invert(1);
+}
+.total-cart-items {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: rgb(15, 213, 15);
+  color: #000000;
+  border-radius: 2px;
+  padding: 0 5px;
+  font-size: .8rem;
 }
 main {
   min-height: 70vh;
@@ -105,7 +118,7 @@ main .loading-msg {
 .product-info p {
   text-align: justify;
 }
-.product-info button {
+.product-info button, .btn {
   padding: .6rem;
   min-width: 40%;
   align-self: flex-start;
@@ -119,7 +132,7 @@ main .loading-msg {
   font-family: inherit;
   transition: background-color 250ms;
 }
-.product-info button:hover {
+.product-info button:hover, .btn:hover {
   background-color: rgba(221, 221, 221, .2);
   color: #222222;
   border: 1.5px solid #222222;
@@ -166,6 +179,10 @@ main.search-page {
 }
 .cart-items {
   width: 60%;
+}
+.cart-items .total-cost {
+  width: 100%;
+  text-align: left;
 }
 footer {
   margin-top: 2rem;
