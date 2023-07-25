@@ -29,7 +29,7 @@ export const Home = () => {
       <section className="hero">
         <h1>All of your shopping needs under one roof.</h1>
         <div className="hero-img-container">
-          <img loading="lazy" src="/images/online-shopping.svg" alt="" />
+          <img src="/images/online-shopping.svg" alt="Hero Image" />
         </div>
       </section>
       <h2>Our Products</h2>

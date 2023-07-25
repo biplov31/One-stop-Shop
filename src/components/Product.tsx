@@ -7,7 +7,7 @@ type ProductProps = {
 export const Product = ({ title, price, image }: ProductProps) => {
   return (
     <div className="product-card">
-      <img src={image} alt={title} />
+      <img loading="lazy" src={image} alt={title} />
       <strong>{title}</strong>
       <span>${price}</span>
     </div>    
