@@ -40,7 +40,7 @@ export const ProductDetail = () => {
           <img src={product.image} alt={product.title} />
           <div className="product-info">
             <h3>{product.title}</h3>
-            <strong>${product.price}</strong>
+            <span className="product-price">${product.price}</span>
             <p>{product.description}</p>
             <button className="btn" onClick={() => addToCart && addToCart(product)}>Add to cart</button>
           </div>

@@ -26,6 +26,12 @@ export const Home = () => {
 
   return (
     <main>
+      <section className="hero">
+        <h1>All of your shopping needs under one roof.</h1>
+        <div className="hero-img-container">
+          <img loading="lazy" src="/images/online-shopping.svg" alt="" />
+        </div>
+      </section>
       <h2>Our Products</h2>
       {!isLoading ? 
         <div className="product-list">

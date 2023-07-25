@@ -7,6 +7,7 @@ export const Cart = () => {
 
   return (
     <main>
+      {/* {JSON.stringify(cart)} */}
       <h2>Your cart</h2>
       <div className="cart-items item-list">
         {cart && cart.length > 0 ? (
@@ -14,17 +15,25 @@ export const Cart = () => {
             <>
               <div key={cartItem.id} className="search-result individual-item">
                 <img src={cartItem.image} alt={cartItem.title} />
-                <strong>{cartItem.title}</strong>
-                <span>${cartItem.price}</span>
-                <span>Quantity: {cartItem.quantity}</span>
+                <div className="cart-item-detail">
+                  <strong>{cartItem.title}</strong>
+                  <span>Price: ${cartItem.price}</span>
+                  <span>Quantity: {cartItem.quantity}</span>
+                </div>
               </div>
-              <strong className="total-cost">Total = ${cart.reduce((acc, item) => acc + item.price * item.quantity, 0)}</strong>
-              <button className="btn">Checkout</button>
             </>
-          ))
-        ) : (
-          <p className="page-info-text">Your cart is empty.</p>
-        )}        
+          )
+          
+          )
+          ) : (
+            <p className="page-info-text">Your cart is empty.</p>
+          )}        
+          {cart && cart.length > 0 &&
+            <>
+              <strong className="total-cost">Total = ${cart?.reduce((acc, item) => acc + item.price * item.quantity, 0) || 0}</strong>
+              <button className="checkout-btn btn">Checkout</button>
+            </>
+          }
       </div>
     </main>
   )
