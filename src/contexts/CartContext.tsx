@@ -12,14 +12,13 @@ export type CartContextType = {
   clearCart: () => void;
 }
 
-export const CartContext = createContext<CartContextType | null>(null);
+export const CartContext = createContext<CartContextType | null>({} as CartContextType);
 
 export const CartProvider = ({ children }: { children: ReactNode }) => {
   const [cart, setCart] = useState<CartItemType[] | []>([]);
 
   const addToCart = (product: ProductType) => {
     const existingItem = cart.find((cartItem) => cartItem.id === product.id);
-    
     if (existingItem) {
       setCart((prevCart) =>
         prevCart.map((cartItem) =>
