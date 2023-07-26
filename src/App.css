@@ -195,7 +195,7 @@ main.search-page {
   align-items: center;
   gap: 1rem;
 }
-.search-result .cart-item-img {
+.search-result img, .cart-item-img {
   width: 15%;
   aspect-ratio: 1;
 }
