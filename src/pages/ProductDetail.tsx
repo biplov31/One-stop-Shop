@@ -3,6 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useContext } from "react";
 import { CartContext } from "../contexts/CartContext";
 import { ProductType } from "./Home";
+import { Loading } from "../components/Loading";
 
 export type ProductDetailType = {
   data: ProductType;
@@ -30,7 +31,7 @@ export const ProductDetail = () => {
   }
 
   if (isLoading) {
-    return <h3>Loading...</h3>
+    return <Loading />
   }
 
   return (
@@ -45,7 +46,7 @@ export const ProductDetail = () => {
             <button className="btn" onClick={() => addToCart && addToCart(product)}>Add to cart</button>
           </div>
         </div>
-        : <h3 className="loading-msg">Loading...</h3>
+        : <Loading />
       }
     </main>
   )

@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { Product } from "../components/Product";
 import { Link } from "react-router-dom";
+import { Loading } from "../components/Loading";
 
 export type ProductType = {
   price: number;
@@ -39,9 +40,9 @@ export const Home = () => {
             <Link key={product.id} to={`/products/${product.id}`} className="product-link">
               <Product title={product.title} image={product.image} price={product.price} />
             </Link>
-          )) : <h3>Loading...</h3>}
+          )) : <Loading />}
         </div>
-        : <h3 className="loading-msg">Loading...</h3>
+        : <Loading />
       }
     </main>
 
